@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Award, BookOpen } from 'lucide-react';
+import { MapPin, Award, BookOpen, ExternalLink } from 'lucide-react';
 
 const Credibility: React.FC = () => {
   return (
@@ -7,12 +7,12 @@ const Credibility: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:gap-16">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">R.I.C.E : L'expertise technique avant tout</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">R.I.C.E : L'expertise métier au cœur du digital</h2>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-              Nous sommes un bureau d'études spécialisé en Environnement et QHSE. Notre légitimité ne vient pas du code informatique, mais du terrain.
+              Nous sommes un <a href="https://www.rice.re" target="_blank" rel="noopener noreferrer" className="text-sky-700 font-semibold hover:underline inline-flex items-center gap-1">bureau d'études spécialisé en Environnement et QHSE <ExternalLink size={16} /></a>. Notre outil a été forgé par l'expérience du terrain pour répondre aux exigences réelles des métiers QHSE.
             </p>
             <p className="text-slate-600 mb-8">
-              Nous accompagnons industriels, collectivités et PME dans la gestion de leurs ICPE (Installations Classées) et de leur sécurité au travail depuis des années. Ce logiciel est né de notre propre besoin de rigueur.
+              Nous accompagnons industriels, collectivités et PME dans la gestion de leurs ICPE (Installations Classées) et de leur sécurité au travail depuis des années. Ce logiciel est la concrétisation numérique de nos méthodes d'ingénierie.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
@@ -46,7 +46,10 @@ const Credibility: React.FC = () => {
                   </div>
                   <div className="ml-3">
                     <p className="font-bold">L'équipe R.I.C.E</p>
-                    <p className="text-sky-400 text-sm">Bureau d'études</p>
+                    <a href="https://www.rice.re" target="_blank" rel="noopener noreferrer" className="text-sky-400 text-sm hover:underline flex items-center gap-1">
+                      Bureau d'études spécialisé
+                      <ExternalLink size={12} />
+                    </a>
                   </div>
                 </div>
               </div>

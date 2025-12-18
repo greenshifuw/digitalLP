@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               onClick={(e) => handleScroll(e, '#contact')}
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-sm text-slate-900 bg-white hover:bg-sky-50 transition-all shadow-lg hover:shadow-xl cursor-pointer"
             >
-              Demander une démonstration
+              Demander un devis ou une démo
               <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
             </a>
             <a 

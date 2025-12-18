@@ -76,7 +76,7 @@ const Offers: React.FC = () => {
                 onClick={(e) => handleScroll(e, '#contact')}
                 className="block w-full text-center px-6 py-4 bg-slate-800 text-white rounded-md font-bold hover:bg-slate-700 transition-colors shadow-lg hover:shadow-xl cursor-pointer"
               >
-                Demander une démo
+                Demander un devis
               </a>
               <p className="mt-4 text-xs text-slate-400 text-center">
                 Sans engagement. Mise en place rapide.

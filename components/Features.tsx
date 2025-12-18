@@ -6,32 +6,32 @@ const Features: React.FC = () => {
     {
       icon: <Activity className="w-6 h-6 text-sky-600" />,
       title: "DUERP & Santé Sécurité",
-      description: "Mise à jour dynamique du Document Unique. Cotation des risques, fiches de pénibilité et suivi des accidents du travail en temps réel."
+      description: "Socle de votre démarche QHSE : mise à jour dynamique du Document Unique. Cotation des risques, fiches de pénibilité et suivi des AT/MP."
     },
     {
       icon: <Recycle className="w-6 h-6 text-sky-600" />,
-      title: "Gestion des Déchets",
-      description: "Centralisez vos BSD (Bordereaux de Suivi de Déchets). Suivez les tonnages, les prestataires agréés et validez votre conformité environnementale."
+      title: "Déchets & Travaux",
+      description: "Volet environnemental (QSE) : centralisez vos BSD, suivez les tonnages et prestataires. Inclut la gestion spécifique des déchets issus de vos opérations de travaux pour une traçabilité complète."
     },
     {
       icon: <Leaf className="w-6 h-6 text-sky-600" />,
-      title: "ISO 14001 & Environnement",
-      description: "Pilotage de vos analyses environnementales. Suivi des indicateurs de performance (KPI) pour vos audits de certification et dossiers ICPE."
+      title: "ISO 14001 & Management",
+      description: "Pilotage de votre Système de Management de l'Environnement (SME). Suivi des KPI pour vos audits de certification ISO et dossiers ICPE."
     },
     {
       icon: <Building className="w-6 h-6 text-sky-600" />,
-      title: "Conformité ERP",
-      description: "Registre de sécurité dématérialisé. Planification des vérifications périodiques obligatoires et suivi des levées de réserves après passage de la commission."
+      title: "Conformité Technique & ERP",
+      description: "Maîtrise des risques bâtimentaires. Planification des VGP et suivi des levées de réserves après passage de la commission de sécurité."
     },
     {
       icon: <ClipboardCheck className="w-6 h-6 text-sky-600" />,
-      title: "Plan d'Actions Global",
-      description: "Un plan d'action unique consolidant toutes vos sources (Audit ISO, visite sécurité, contrôle réglementaire) avec attribution et relances."
+      title: "Pilotage QSE Global",
+      description: "Un plan d'action unique consolidant toutes vos sources (Audits, visites sécurité, contrôles réglementaires) avec relances automatiques."
     },
     {
       icon: <FileCheck className="w-6 h-6 text-sky-600" />,
-      title: "Gestion des Habilitations",
-      description: "Suivez les CACES, SST, habilitations électriques de vos équipes technique et maintenance. Recevez des alertes avant expiration."
+      title: "Habilitations & Compétences",
+      description: "Suivez les CACES, SST et habilitations électriques. Recevez des alertes avant expiration pour garantir la sécurité QHSE sur site."
     }
   ];
 
@@ -39,9 +39,9 @@ const Features: React.FC = () => {
     <section id="features" className="py-20 bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Une suite modulaire complète</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Une suite QHSE modulaire</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Activez les modules dont vous avez besoin. De la simple gestion des risques professionnels au management environnemental complet.
+            Activez les modules nécessaires à votre structure. De la simple gestion des risques professionnels au management QSE complet multi-sites.
           </p>
         </div>
 

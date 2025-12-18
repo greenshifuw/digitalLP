@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -52,11 +52,20 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </a>
             ))}
             <a 
+              href="https://www.rice.re" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs font-semibold text-sky-700 hover:text-sky-900 transition-colors border-r border-slate-200 pr-6 mr-2"
+            >
+              Bureau d'Études
+              <ExternalLink size={14} />
+            </a>
+            <a 
               href="#contact" 
               onClick={(e) => handleScroll(e, '#contact')}
               className="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-sm text-sm font-semibold transition-all shadow-sm hover:shadow-md cursor-pointer"
             >
-              Demander une démo
+              Devis ou Démo
             </a>
           </div>
 
@@ -87,11 +96,20 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </a>
             ))}
             <a
+              href="https://www.rice.re"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-3 text-base font-medium text-sky-700 border-t border-slate-100"
+            >
+              Consulter le site du Bureau d'Études
+              <ExternalLink size={18} />
+            </a>
+            <a
               href="#contact"
               onClick={(e) => handleScroll(e, '#contact')}
               className="block w-full text-center mt-4 bg-slate-800 text-white px-3 py-3 rounded-md text-base font-semibold cursor-pointer"
             >
-              Demander une démo
+              Demander un devis ou une démo
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Globe, ArrowRight } from 'lucide-react';
 
 const ContactFooter: React.FC = () => {
   const [name, setName] = useState('');
@@ -12,10 +12,10 @@ const ContactFooter: React.FC = () => {
     e.preventDefault();
     
     // Construction du sujet et du corps de l'email
-    const subject = `Demande de démonstration R.I.C.E - ${entityName || structureType}`;
+    const subject = `Demande de devis / démonstration R.I.C.E - ${entityName || structureType}`;
     const body = `Bonjour,
 
-Je souhaite solliciter une démonstration de votre outil de pilotage.
+Je souhaite solliciter un devis ou une démonstration de votre outil de pilotage.
 
 Voici mes informations :
 - Nom : ${name}
@@ -24,7 +24,7 @@ Voici mes informations :
 - Module d'intérêt principal : ${selectedModule}
 - Email professionnel : ${email}
 
-Merci de me recontacter pour convenir d'un rendez-vous.
+Merci de me recontacter pour convenir d'un rendez-vous ou me transmettre une proposition tarifaire.
 
 Cordialement,`;
 
@@ -38,9 +38,9 @@ Cordialement,`;
   return (
     <section id="contact" className="py-20 bg-slate-900 text-white scroll-mt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold mb-4">Passez de l'inquiétude à la sérénité</h2>
+        <h2 className="text-3xl font-bold mb-4">Centralisez votre pilotage réglementaire</h2>
         <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-          Discutons de vos enjeux QHSE. Un petit échange technique pour évaluer la pertinence de l'outil pour votre structure.
+          Discutons de vos enjeux QHSE. Un échange technique pour évaluer comment l'outil peut optimiser la conformité de votre structure.
         </p>
 
         <div className="bg-white rounded-lg p-8 shadow-2xl max-w-lg mx-auto">
@@ -122,7 +122,7 @@ Cordialement,`;
             </div>
 
             <button type="submit" className="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 rounded-md transition-all flex items-center justify-center group mt-2">
-              Demander une démonstration
+              Demander un devis ou une démo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </form>
@@ -131,7 +131,7 @@ Cordialement,`;
           </p>
         </div>
 
-        <div className="mt-12 flex justify-center space-x-8 text-sky-200">
+        <div className="mt-12 flex flex-wrap justify-center gap-8 text-sky-200">
           <a href="mailto:contact@rice.re" className="flex items-center hover:text-white transition-colors">
             <Mail className="w-5 h-5 mr-2" />
             <span>contact@rice.re</span>
@@ -139,6 +139,10 @@ Cordialement,`;
           <a href="tel:+262692656166" className="flex items-center hover:text-white transition-colors">
             <Phone className="w-5 h-5 mr-2" />
             <span>+262 692 656166</span>
+          </a>
+          <a href="https://www.rice.re" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
+            <Globe className="w-5 h-5 mr-2" />
+            <span>www.rice.re</span>
           </a>
         </div>
       </div>

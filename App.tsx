@@ -32,10 +32,18 @@ export default function App() {
         <ContactFooter />
       </main>
 
-      <footer className="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+      <footer className="bg-slate-900 text-slate-400 py-10 text-center text-sm border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-6">
           <p>© {new Date().getFullYear()} R.I.C.E - Bureau d'études Environnement & QHSE. Tous droits réservés.</p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex flex-wrap gap-6 justify-center">
+            <a 
+              href="https://www.rice.re" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors underline underline-offset-2 decoration-slate-700 hover:decoration-white"
+            >
+              Le Bureau d'Études
+            </a>
             <button 
               onClick={() => setLegalModalOpen(true)}
               className="hover:text-white transition-colors underline underline-offset-2 decoration-slate-700 hover:decoration-white"
