@@ -117,6 +117,7 @@ Cordialement,`;
                   <option>Gestion des Déchets (BSD)</option>
                   <option>ISO 14001 & Environnement</option>
                   <option>Conformité ERP & Incendie</option>
+                  <option>Autre</option>
                 </select>
               </div>
             </div>

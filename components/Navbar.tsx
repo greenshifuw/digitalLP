@@ -24,23 +24,29 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+    <nav className="fixed w-full z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-28 items-center">
-          <div className="flex items-center gap-4">
-            <img 
-              src="https://drive.google.com/thumbnail?id=1fuy_xQJH5LZGyoPu_0Hc7-pDsrnIPuF6&sz=w400" 
-              alt="Logo R.I.C.E" 
-              className="h-24 w-auto object-contain"
-            />
+        <div className="flex justify-between h-16 md:h-20 lg:h-24 items-center">
+          <div className="flex items-center gap-2 lg:gap-4">
+            <div className="relative flex items-center justify-center">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1fuy_xQJH5LZGyoPu_0Hc7-pDsrnIPuF6&sz=w400" 
+                alt="Logo R.I.C.E" 
+                className="h-10 md:h-12 lg:h-16 w-auto object-contain"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  filter: 'brightness(1.1) contrast(1.05)' 
+                }}
+              />
+            </div>
             <div className="flex flex-col justify-center">
-              <span className="font-bold text-slate-900 tracking-tight leading-none text-5xl">R.I.C.E</span>
-              <span className="text-xl uppercase tracking-wider text-slate-500 font-medium mt-1">Pilotage Réglementaire & QHSE</span>
+              <span className="font-bold text-slate-900 tracking-tight leading-none text-xl md:text-2xl lg:text-4xl">R.I.C.E</span>
+              <span className="text-[8px] md:text-[10px] lg:text-sm uppercase tracking-wider text-slate-500 font-medium mt-0.5">Pilotage Réglementaire & QHSE</span>
             </div>
           </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-6 items-center">
+          {/* Desktop Nav - visible only on Large screens (>=1024px) to avoid tablet overlap */}
+          <div className="hidden lg:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -69,11 +75,11 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile/Tablet Menu Button - visible up to 1024px (lg) */}
+          <div className="lg:hidden flex items-center">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
-              className="text-slate-600 hover:text-slate-900 focus:outline-none"
+              className="text-slate-600 hover:text-slate-900 focus:outline-none p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -81,9 +87,9 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile & Tablet Side/Dropdown Nav */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+        <div className="lg:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
